@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+<!-- THREE STEPS TO INSTALL 2-WAY BACKGROUND IMAGES SLIDES:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the onLoad event handler into the BODY tag
+  3.  Put the last coding into the HEAD of your HTML document - Optional  -->
+
+<!-- STEP ONE: Paste this code into the HEAD of your HTML document  -->
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+// (C) 2001 www.CodeLifter.com
+// http://www.codelifter.com
+// Free for all users, but leave in this  header
+
+// =======================================
+// set the following variables
+// =======================================
+
+// Set speed (milliseconds)
+var speed = 1000
+
+// Specify the image files
+var Pic = new Array() // don't touch this
+// to add more images, just continue
+// the pattern, adding to the array below
+
+Pic[0] = '1.jpg'
+Pic[1] = '2.jpg'
+Pic[2] = '3.jpg'
+
+
+// do not edit anything below this line
+
+var t
+var j = 0
+var p = Pic.length
+
+var preLoad = new Array()
+for (i = 0; i < p; i++){
+   preLoad[i] = new Image()
+   preLoad[i].src = Pic[i]
+}
+
+function runBGSlideShow(){
+   if (document.body){
+   document.body.background = Pic[j];
+   j = j + 1
+   if (j > (p-1)) j=0
+   t = setTimeout('runBGSlideShow()', speed)
+   }
+}
+//  End -->
+</script>
+
+</HEAD>
+
+<!-- STEP TWO: Insert the onLoad event handler into your BODY tag  -->
+
+<body onload="runBGSlideShow()">
+
+<!-- STEP THREE: Copy this code into the HEAD of your HTML document  -->
+<style>
+body{
+background-repeat: no-repeat;
+background-position: 200 100; 
+
+}
+</style>
+<br><br><br><br><br><br>
+<center>
+<font size=2><B>배경으로 이미지 슬라이드를 넣을 수 있는 스크립트입니다.</B></font> </center>
+
+</BODY>
+</HTML>

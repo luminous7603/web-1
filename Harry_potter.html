@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+    <TITLE> Harry Potter </TITLE>
+    <META NAME="Generator" CONTENT="EditPlus">
+    <META NAME="Author" CONTENT="">
+    <meta name="keywords" content="" />
+
+    <META NAME="Description" CONTENT="">
+    <link rel="stylesheet" type="text/css" href="css/harry.css" />
+	<link rel="stylesheet" href="css/needpopup.min.css">
+
+</HEAD>
+<body>
+    <div>
+        <div id="slidebox">
+            <ul id="slider">
+                <li>
+                    <img src="res/1.jpg" alt="image1.jpg" style="background-size: contain;" />
+                </li>
+                <li>
+                    <img src="res/2.jpg" alt="image2.jpg" style="background-size: contain;" />
+                </li>
+                <li>
+                    <img src="res/3.jpg" alt="image3.jpg" style="background-size: contain;" />
+                </li>
+                <li>
+                    <img src="res/4.jpg" alt="image4.jpg" style="background-size: contain;" />
+                </li>
+                <li>
+                    <img src="res/5.jpg" alt="image5.jpg" style="background-size: contain; background-attachment:scroll;" />
+                </li>
+            </ul>
+        </div>
+
+        <!-- aside indecator, changing background (maybe) -->
+        <div style="width: 100%; height:auto; position:fixed; top:50%;">
+            <img src="res/go_back.png" width="60" height="70" style="position:fixed; left:10px;" onclick="startSlide('prev')" 
+            onmouseover="this.src='res/go_back_hover.png'" onmouseout="this.src='res/go_back.png'"/>
+            <img src="res/go_next.png" width="60" height="70" style="position:fixed; right:10px;" onclick="startSlide('next')" 
+            onmouseover="this.src='res/go_next_hover.png'" onmouseout="this.src='res/go_next.png'"/>
+        </div>
+        <!-- This part is Head Section  -->
+        <div style="width: 100%; text-align:center; position:fixed; top:1%;">
+            <a href="Harry potter.html"><img src="http://jinnecom.dothome.co.kr/20165/harrypotter/harrylogo.png" style="width: 100%; max-width: 300px; vertical-align: middle" /></a>
+            <a href="team_profile.html"><img src='res/Phoenix.png' width=180 height=85 style="position: absolute; left:10px; top:10px;"></a>
+            <a href="http://www.seoultech.ac.kr"><input type='image' src='res/seoultech.png' width=100 height=100 style="position: absolute; right:1px;"></a>
+        </div>
+
+            <div class="container" style="width:100%; text-align:center; position:fixed;top:15%; display:inline-block;">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">EXPLORE THE STORY</a>
+                        <ul class="dropdown-menu" style="text-align:center;">
+                            <li><a href="#">The Philosopher's Stone</a></li>
+                            <li><a href="#">The Chamber of Secrets</a></li>
+                            <li><a href="#">The Prisoner of Azkaban</a></li>
+                            <li><a href="#">The Goblet of Fire</a></li>
+                            <li><a href="#">The Order of the Phoenix</a></li>
+                            <li><a href="#">The Half-Blood Prince</a></li>
+                            <li><a href="#">The Deathly Hallows</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">FANTASTIC BEAST</a>
+                        <ul class="dropdown-menu" style="text-align:center;">
+                            <li><a href="#">Characters</a></li>
+                            <li><a href="#">Trailer</a></li>
+                            <li><a href="#">Summary</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">ATTRACTION</a>
+                        <ul class="dropdown-menu" style="text-align:center;">
+                            <li><a href="#">Universial Studio in JAPAN</a></li>
+                            <li><a href="#">Universial Studio in ENGLAND</a></li>
+                            <li><a href="#">Harry Potter and The Cursed Child</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">MAGIC SPELL</a>
+                        <ul class="dropdown-menu" style="text-align:center;">
+                            <li><a href="#" data-needpopup-show="#small-popup">Offensive Magic</a></li>
+                            <li><a href="#">Dffensive Magic</a></li>
+                            <li><a href="#">Unforgivable Magic</a></li>
+							<div id='small-popup' class="needpopup">
+								<p>a type specimen book.</p>
+								</div>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">THE WIZARDING WORLD</a>
+                        <ul class="dropdown-menu" style="text-align:center;">
+                            <li><a href="#">Horgwarts School</a></li>
+                            <li><a href="#">Gloucester Cathedral</a></li>
+                            <li><a href="#">King's Cross Station</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        <audio autoplay loop>
+            <source src="res/BGM.mp3" type="audio/mp3">
+        </audio>
+
+    </div>
+    <!-- script -->
+    <script src="js/harry.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/needpopup.min.js"></script>
+	<script>  
+		needPopup.config.custom = {
+			'removerPlace': 'outside',
+			'closeOnOutside': false,
+			onShow: function() {
+				console.log('needPopup is shown');
+			},
+			onHide: function() {
+				console.log('needPopup is hidden');
+			}
+		};
+		needPopup.init();
+	</script>
+</body>
+</HTML>
